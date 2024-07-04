@@ -21,3 +21,25 @@ and then checkout the sqs branch
 ```
 git checkout sqs
 ```
+
+
+reinstall helm chart
+
+create a queue registry:
+
+```yaml
+apiVersion: "queues.mirrord.metalbear.co/v1alpha"
+kind: MirrordWorkloadQueueRegistry
+metadata:
+  name: first-ever-splitter
+spec:
+  queues:
+    manual-queue:
+      queueType: SQS
+      envVar: SQS_TEST_Q_NAME
+  consumer: 
+    rollout: sqs-printer
+  tags:
+    who: me
+    when: now
+```
