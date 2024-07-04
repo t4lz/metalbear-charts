@@ -14,7 +14,7 @@ createNamespace: true
 roleNamespaces: []
 
 operator:
-  image: ghcr.io/metalbear-co/operator
+  image: docker.io/t4lz/operator-sqs-test
   podAnnotations: {}
   podLabels: {}
   jsonLog: false
