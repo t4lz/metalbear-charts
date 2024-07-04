@@ -1,8 +1,23 @@
 ## Setting up a mirrord operator with an SQS Splitter
 
-Download a new mirrord binary from 
 
 Follow the AWS guide to create an IAM role for the operator's service account:
 https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html
 
+Download a new mirrord binary from 
 
+
+Clone the chart's repo's fork, or add it as a new remote.
+```
+git clone git@github.com:t4lz/metalbear-charts.git
+```
+or alternatively
+```
+git remote add t4lz git@github.com:t4lz/metalbear-charts.git
+git fetch t4lz sqs
+```
+
+and then checkout the sqs branch
+```
+git checkout sqs
+```
