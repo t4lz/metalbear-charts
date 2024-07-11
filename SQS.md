@@ -4,8 +4,19 @@
 Follow the AWS guide to create an IAM role for the operator's service account:
 https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html
 
+```
+mv ~/Downloads/universal-apple-darwin.zip ~/Downloads/universal-apple-darwin-old.zip
+```
+
 Download a new mirrord binary from 
 https://github.com/metalbear-co/mirrord/actions/runs/9891152141/artifacts/1690856327
+
+```
+unzip ~/Downloads/universal-apple-darwin
+xattr -d com.apple.quarantine ~/Downloads/universal-apple-darwin/mirrord
+chmod u+x ~/Downloads/universal-apple-darwin/mirrord
+cp ~/Downloads/universal-apple-darwin/mirrord ~/Library/Application\ Support/JetBrains/IntelliJIdea2024.1/plugins/mirrord/bin/macos/mirrord
+```
 
 
 Clone the chart's repo's fork, or add it as a new remote.
