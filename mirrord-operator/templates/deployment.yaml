@@ -74,7 +74,7 @@ spec:
           {{- required "Either keyRef, pemRef, file or key value is required for license!" .Values.license.keyRef }}
         {{- end }}
         image: {{ .Values.operator.image }}:{{ .Chart.AppVersion }}
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         {{- if .Values.operator.containerArgs }}
         args:
           {{- range .Values.operator.containerArgs }}
