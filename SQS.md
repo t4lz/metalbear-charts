@@ -44,3 +44,10 @@ spec:
     who: me
     when: now
 ```
+
+
+To see operator logs:
+
+```
+kubectl logs -n mirrord -l app=mirrord-operator --tail -1 | less -R
+```
