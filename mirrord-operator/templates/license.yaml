@@ -1,4 +1,4 @@
-{{- if .Values.license.file.data }}
+{{- if ((((.Values).license).file).data) }}
 apiVersion: v1
 kind: Secret
 metadata:
